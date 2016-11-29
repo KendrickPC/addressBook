@@ -8,5 +8,12 @@ var bob = {
 };
 
 console.log(bob.firstName);
-console.log();
-console.log();
+console.log(bob.lastName);
+console.log(bob.email);
+
+var mary = {
+	firstName: "Mary",
+	lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+}
