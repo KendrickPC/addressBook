@@ -18,6 +18,17 @@ var printPerson = function(person) {
     console.log(person.firstName + " " + person.lastName)
 };
 
-printPerson(contacts[0]);
-printPerson(contacts[1]);
+// printPerson(contacts[0]);
+// printPerson(contacts[1]);
 
+// writing out screen to list out all the contacts
+
+// Keeping the variable contactsLength local vs global
+function list() {
+    var contactsLength = contacts.length; 
+    for (i = 0; i < contacts.length; i++){
+        printPerson(contacts[i]);
+    }
+};
+
+list();
