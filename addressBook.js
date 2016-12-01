@@ -2,14 +2,14 @@ var bob = {
     firstName: "Bob",
     lastName: "Jones",
     phoneNumber: "(650) 777-7777",
-    email: "bob.jones@example.com"
+    email: "bob.jones@gmail.com"
 };
 
 var mary = {
     firstName: "Mary",
     lastName: "Johnson",
     phoneNumber: "(650) 888-8888",
-    email: "mary.johnson@example.com"
+    email: "mary.johnson@gmail.com"
 };
 
 var contacts = [bob, mary];
@@ -18,17 +18,33 @@ var printPerson = function(person) {
     console.log(person.firstName + " " + person.lastName)
 };
 
-// printPerson(contacts[0]);
-// printPerson(contacts[1]);
-
-// writing out screen to list out all the contacts
-
-// Keeping the variable contactsLength local vs global
+// begin list function for all contacts
 function list() {
     var contactsLength = contacts.length; 
     for (i = 0; i < contacts.length; i++){
         printPerson(contacts[i]);
     }
 };
-
 list();
+// end list function for all contacts
+
+// begin search function for last name
+function search(lastName){
+var contactsLength = contacts.length;
+for (var i = 0; i < contactsLength; i++) {
+if(lastName == contacts[i].lastName) {
+printPerson(contacts[i]);
+}
+else{
+console.log("Nope");
+    }
+  }
+};
+search("Jones");
+// end search function for last name
+
+// begin function to add new contacts
+// function add(firstName, lastName, email, phoneNumber) {
+//     contacts[contacts.length] = add;
+// };
+// end function to add new contacts
