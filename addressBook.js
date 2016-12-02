@@ -44,7 +44,28 @@ search("Jones");
 // end search function for last name
 
 // begin function to add new contacts
-// function add(firstName, lastName, email, phoneNumber) {
-//     contacts[contacts.length] = add;
-// };
+function add(firstName, lastName, phoneNumber, email) {
+    contacts[contacts.length] = {
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+        email: email
+    };
+};
+
+add("bob", "chang", 123456789, "bobChang@gmail.com");
+list();
 // end function to add new contacts
+
+
+
+
+
+
+
+
+
+
+
+
+
